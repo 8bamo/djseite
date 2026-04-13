@@ -549,6 +549,60 @@ button {
 .captcha-note {
   color: var(--text);
 }
+.legal-layout {
+  max-width: var(--max-width);
+  margin: 0 auto 24px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.legal-card,
+.legal-copy {
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.34);
+}
+
+.legal-card {
+  padding: 22px;
+}
+
+.legal-card h2,
+.legal-copy h2,
+.legal-copy h3 {
+  margin: 0 0 14px;
+  font-family: "Oswald", sans-serif;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.legal-card h2,
+.legal-copy h2 {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+}
+
+.legal-copy h3 {
+  margin-top: 28px;
+  font-size: 1.25rem;
+}
+
+.legal-card p,
+.legal-copy p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.legal-card p + p,
+.legal-copy p + p {
+  margin-top: 10px;
+}
+
+.legal-copy {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 24px;
+}
 
 .bio-grid {
   align-items: start;
@@ -830,5 +884,6 @@ button {
     align-items: flex-start;
   }
 }
+
 
 
