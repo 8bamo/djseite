@@ -24,8 +24,7 @@ body {
   margin: 0;
   font-family: "Instrument Sans", sans-serif;
   color: var(--text);
-  background:
-    linear-gradient(180deg, #f4ede4 0%, var(--bg) 45%, #eadfce 100%);
+  background: linear-gradient(180deg, #f4ede4 0%, var(--bg) 45%, #eadfce 100%);
 }
 
 a {
@@ -44,7 +43,8 @@ button {
 
 .site-header,
 .section,
-.site-footer {
+.site-footer,
+.text-hero {
   padding-inline: 24px;
 }
 
@@ -98,7 +98,11 @@ button {
 .contact-card p,
 .site-footer,
 .hero-band span,
-.hero-side-block p {
+.hero-side-block p,
+.text-hero-copy,
+.text-story p,
+.text-side-card p,
+.quote-card p {
   text-wrap: pretty;
 }
 
@@ -156,7 +160,9 @@ button {
 .sessions-grid,
 .contact-card,
 .site-footer,
-.gallery-grid {
+.gallery-grid,
+.text-hero-inner,
+.text-page-grid {
   max-width: var(--max-width);
   margin: 0 auto;
 }
@@ -169,7 +175,8 @@ button {
 
 .hero-marquee,
 .hero-grid,
-.hero-band {
+.hero-band,
+.text-hero-inner {
   background: var(--stage);
 }
 
@@ -208,7 +215,9 @@ button {
 .sound-item h3,
 .sessions-grid h3,
 .contact-card h2,
-.bio-points span {
+.bio-points span,
+.text-hero h1,
+.text-side-card strong {
   text-wrap: balance;
 }
 
@@ -219,14 +228,41 @@ button {
   font-weight: 600;
 }
 
-.hero h1 {
+.hero h1,
+.text-hero h1 {
   margin: 0;
-  max-width: 9ch;
   font-family: "Oswald", sans-serif;
-  font-size: clamp(4rem, 10vw, 8rem);
   line-height: 0.88;
   font-weight: 500;
   text-transform: uppercase;
+}
+
+.hero h1 {
+  max-width: 9ch;
+  font-size: clamp(4rem, 10vw, 8rem);
+}
+
+.text-hero {
+  padding-top: 24px;
+}
+
+.text-hero-inner {
+  padding: 34px 24px 38px;
+  border: 1px solid var(--line-light);
+  color: #f3eadf;
+}
+
+.text-hero h1 {
+  max-width: 10ch;
+  font-size: clamp(3.4rem, 9vw, 6.2rem);
+}
+
+.text-hero-copy {
+  max-width: 42rem;
+  margin: 20px 0 0;
+  color: rgba(243, 234, 223, 0.76);
+  font-size: 1.04rem;
+  line-height: 1.75;
 }
 
 .hero-text {
@@ -290,7 +326,9 @@ button {
   border: 1px solid var(--line-light);
 }
 
-.hero-side-block {
+.hero-side-block,
+.text-side-card,
+.quote-card {
   display: grid;
   gap: 6px;
   padding: 18px;
@@ -361,7 +399,8 @@ button {
 .intro-grid,
 .bio-grid,
 .sessions-grid,
-.contact-card {
+.contact-card,
+.text-page-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 24px;
@@ -373,11 +412,58 @@ button {
 .sound-item p,
 .contact-card p,
 .session-list li,
-.bio-points p {
+.bio-points p,
+.text-story p,
+.text-side-card p,
+.quote-card p {
   margin: 0;
   font-size: 1rem;
   line-height: 1.75;
   color: var(--muted);
+}
+
+.text-page {
+  padding-bottom: 92px;
+}
+
+.text-story {
+  display: grid;
+  gap: 18px;
+}
+
+.text-story p {
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+
+.text-story p:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.text-side {
+  display: grid;
+  gap: 16px;
+  align-content: start;
+}
+
+.text-side-card strong,
+.quote-card cite {
+  color: #f3eadf;
+}
+
+.text-side-card p,
+.quote-card p {
+  color: rgba(243, 234, 223, 0.78);
+}
+
+.quote-card {
+  gap: 10px;
+}
+
+.quote-card cite {
+  font-style: normal;
+  color: rgba(243, 234, 223, 0.7);
 }
 
 .bio-grid {
@@ -469,10 +555,7 @@ button {
   object-fit: cover;
 }
 
-.gallery-card-wide img {
-  min-height: 420px;
-}
-
+.gallery-card-wide img,
 .gallery-card-tall img {
   min-height: 420px;
 }
@@ -574,7 +657,8 @@ button {
   .intro-grid,
   .bio-grid,
   .sessions-grid,
-  .contact-card {
+  .contact-card,
+  .text-page-grid {
     grid-template-columns: 1fr;
   }
 
@@ -592,7 +676,8 @@ button {
 @media (max-width: 640px) {
   .site-header,
   .section,
-  .site-footer {
+  .site-footer,
+  .text-hero {
     padding-inline: 18px;
   }
 
@@ -602,11 +687,13 @@ button {
   }
 
   .hero-marquee,
-  .hero-grid {
+  .hero-grid,
+  .text-hero-inner {
     padding-inline: 18px;
   }
 
-  .hero h1 {
+  .hero h1,
+  .text-hero h1 {
     font-size: clamp(2.9rem, 16vw, 4.8rem);
   }
 
@@ -629,7 +716,8 @@ button {
     border-top: 0;
   }
 
-  .section {
+  .section,
+  .text-page {
     padding-top: 74px;
   }
 
@@ -648,7 +736,8 @@ button {
     grid-column: auto;
   }
 
-  .contact {
+  .contact,
+  .text-page {
     padding-bottom: 74px;
   }
 
