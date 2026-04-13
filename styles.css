@@ -485,6 +485,70 @@ button {
   color: var(--muted);
   line-height: 1.55;
 }
+.contact-page-grid {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 24px;
+}
+
+.contact-panel,
+.contact-form-panel {
+  padding: 22px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.34);
+}
+
+.contact-panel h2 {
+  margin: 0 0 16px;
+  font-family: "Oswald", sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.contact-panel p,
+.form-note,
+.captcha-note,
+.form-row label {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.contact-panel p + p {
+  margin-top: 10px;
+}
+
+.contact-form-panel {
+  display: grid;
+  gap: 16px;
+  align-content: start;
+}
+
+.form-row {
+  display: grid;
+  gap: 8px;
+}
+
+.form-row-area {
+  gap: 10px;
+}
+
+.form-field {
+  min-height: 48px;
+  border: 1px solid var(--line);
+  background: rgba(248, 243, 235, 0.78);
+}
+
+.form-field-area {
+  min-height: 144px;
+}
+
+.captcha-note {
+  color: var(--text);
+}
 
 .bio-grid {
   align-items: start;
@@ -766,4 +830,5 @@ button {
     align-items: flex-start;
   }
 }
+
 
