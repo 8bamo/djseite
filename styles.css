@@ -465,6 +465,26 @@ button {
   font-style: normal;
   color: rgba(243, 234, 223, 0.7);
 }
+.reference-grid {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.reference-column {
+  display: grid;
+  gap: 0;
+}
+
+.reference-column p {
+  margin: 0;
+  padding: 12px 0;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  line-height: 1.55;
+}
 
 .bio-grid {
   align-items: start;
@@ -746,3 +766,4 @@ button {
     align-items: flex-start;
   }
 }
+
